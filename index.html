@@ -10,22 +10,105 @@
         html {
             scroll-behavior: smooth;
         }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Encabezado */
+        /* h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        } */
+
+        /* "¿Quiénes somos?" */
+        .bg-yellow-custom {
+            background-color: #FFF9C4; 
+        }
+
+        .text-yellow-custom {
+            color: #FDD835; 
+        }
+
+        /* recuadros */
+        .recuadro {
+            background-color: #F5F5DC; 
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; 
+        }
+
+        /* Botones */
+        .boton {
+            display: inline-block;
+            background-color: #007BFF; 
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .boton:hover {
+            background-color: #0056b3; 
+        }
+
+        /*  voluntarios */
+        .voluntarios {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .voluntario {
+            text-align: center;
+        }
+
+        .voluntario img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .voluntario p {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        
+        .boton-margen {
+            margin-bottom: 30px; 
+        }
+
     </style>
 </head>
 <body>
     <!--Barra de navegación-->
     <header class="bg-orange-500 p-4 flex justify-between items-center">
         <div class="flex items-center space-x-2">
-            <img class="h-auto max-w-sm rounded-lg" src="./img/patita_logo.png" width="100px"">
+            <img class="h-auto max-w-sm rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30" src="./img/patita_logo.png" width="200px"">
             <span class="text-black text-xl font-bold">Refugio de perritos</span>
         </div>
-        <nav class="space-x-20 text-black font-semibold">
-            <a href="#dona" class="bg-yellow-300 text-black py-2 px-4 rounded-full hover:bg-yellow-400 text-lg">Dona</a>
-            <a href="" class="bg-yellow-200 text-black py-2 px-4 rounded-full hover:bg-yellow-300 text-lg">Voluntarios</a>
-            <a href="#adopta" class="bg-yellow-200 text-black py-2 px-4 rounded-full hover:bg-yellow-300 text-lg">¡Adopta!</a>
+        <nav class="space-x-6 text-black font-semibold">
+            <a href="#" class="hover:text-gray-800">Voluntarios</a>
+            <a href="#" class="hover:text-gray-800">¡Adopta!</a>
+            <a href="#" class="bg-yellow-300 text-black py-2 px-4 rounded-full hover:bg-yellow-400">Dona</a>
         </nav>
     </header>
-    <!--Inicio-->
     <section class="bg-orange-400 h-[40rem] flex justify-center items-center text-center">
         <div class="max-w-lg">
             <div class="flex justify-center mb-4">
@@ -40,9 +123,60 @@
             </div>
         </div>
     </section>
-    
+    <!-- "¿Quiénes somos?" -->
+    <section class="bg-yellow-custom">
+        <h2 class="text-yellow-custom">¿Quiénes somos?</h2>
+        <p>
+            Nuestra misión es cuidar y dar atención a los perros en lo que encuentran un verdadero hogar que los reciba con mucho cariño.
+        </p>
+        <div class="recuadro">
+            <p>Ubícanos en Elm Street No. 5<br>
+            ¡Te esperamos para adoptar o apoyar a los perritos!</p>
+            <a href="https://www.google.com/maps" target="_blank" class="boton">Ver en el mapa</a>
+        </div>
+
+        <div class="recuadro">
+            <h3 class="text-yellow-custom">Ayúdanos</h3>
+            <p>
+                Siempre puedes apoyar al refugio donando o apoyando con alimento para los perros o productos de limpieza. 
+                O puedes volverte voluntario para ayudarnos a cuidar a los perros.
+            </p>
+        </div>
+    </section>
+
+    <!--  "Únete al equipo" -->
+    <section style="background-color: #FFE0B2;">
+        <h2 style="color: #FB8C00;">Únete al equipo</h2>
+        <p>
+            Si deseas colaborar con nosotros en el cuidado de nuestros amiguitos, no dudes en unirte como voluntario. ¡Tu ayuda es invaluable!
+        </p>
+        <a href="#registro" class="boton boton-margen" style="background-color: #FB8C00;">Regístrate como voluntario</a>
+
+        <!-- Voluntarios destacados -->
+        <div class="voluntarios">
+            <div class="voluntario">
+                <img src="https://cdn.unotv.com/images/2023/08/perro-mujer-154410-1024x576.jpg" alt="Carla Ferrero">
+                <p>Carla Ferrero<br><span style="color: #666;">Administrativo</span></p>
+            </div>
+
+            <div class="voluntario">
+                <img src="https://media.istockphoto.com/id/1350399329/es/foto/joven-feliz-tomándose-selfie-con-su-perro-en-un-parque-chico-sonriente-y-cachorro.jpg?s=612x612&w=0&k=20&c=HqF0XIzucptQwdVN0UfraVeVM5n6d7uuuM1P-gsplrU=" alt="Iván Gillete">
+                <p>Iván Gillete<br><span style="color: #666;">Gestor de Redes Sociales</span></p>
+            </div>
+
+            <div class="voluntario">
+                <img src="https://media.istockphoto.com/id/1348209421/es/foto/mujer-de-negocios-sonriente-que-trabaja-con-una-computadora-portátil-mientras-mira-la-cámara.jpg?s=612x612&w=0&k=20&c=U_l_jhg7yF1AR3nGeg97ih87y1qe1D4ozImRKUCJkrc=" alt="Marisa Ramírez">
+                <p>Marisa Ramírez<br><span style="color: #666;">Coordinadora de Eventos</span></p>
+            </div>
+
+            <div class="voluntario">
+                <img src="https://img.freepik.com/fotos-premium/joven-medico-veterinario-pie-junto-mesa-medica-yorkshire-terrier_236854-46903.jpg?w=360" alt="Javier Redondo">
+                <p>Javier Redondo<br><span style="color: #666;">Asistente en Salud Animal</span></p>
+            </div>
+        </div>
+    </section>
     <!--Seccion ¿Quieres adoptar?-->
-    <section id="adopta" class="h-screen p-5 bg-[#FFF9C4;]">
+    <section class="h-screen p-5 bg-[#FFF9C4;]">
       <h1 class="text-4xl font-bold block text-center text-[#FDD835]">¿Quieres adoptar?</h1>
       <aside class=" h-[35rem] w-10/12 mt-14 mx-auto flex flex-col gap-5 scroll-y-auto overflow-y-scroll">
         <div class="flex bg-[#feffea] rounded-lg ">
@@ -88,7 +222,7 @@
         <div class="flex bg-[#feffea] rounded-lg ">
           <img class="h-44 rounded-l-lg mr-5 w-[15rem]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7lkawcqjiHdmN-FquvzilxYI1outSpfO-YA&s"/>
           <div class="my-auto font-bold">
-            <p>Dylan</p>
+            <p>DUG</p>
             <p>Macho</p>
             <p>3 años</p>
             <p>Golden Retriever</p>
@@ -125,20 +259,20 @@
       <h1 class="text-4xl font-bold block text-center text-white">
         Visita nuestras redes sociales
       </h1>
-      <div class="grid grid-cols-2 grid-rows-2 gap-10 mx-auto w-1/2 mt-[5rem]">
-        <div class="h-[10rem] w-[25rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
-          <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" class="size-20 ml-10"/>
+      <div class="grid grid-cols-2 grid-rows-2 gap-10 mx-auto w-1/2 mt-[5rem] w-3/4">
+        <div class="h-[15rem] w-[30rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
+          <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" class="size-20 ml-10 mr-10"/>
           <p>www.facebook.com/</p>
         </div>
-        <div class="h-[10rem] w-[25rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
+        <div class="h-[15rem] w-[30rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
           <img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="size-20 ml-10"/>
           <p>www.whatsapp.com/</p>
         </div>
-        <div class="h-[10rem] w-[25rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
-          <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-512.png" class="size-20 ml-10"/>
+        <div class="h-[15rem] w-[30rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
+          <img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-2-512.png" class="size-20 ml-10 mr-10"/>
           <p>www.instagram.com/</p>
         </div>
-        <div class="h-[10rem] w-[25rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
+        <div class="h-[15rem] w-[30rem] bg-[#FFE0B2] rounded-xl flex items-center mx-auto">
           <img src="https://static-00.iconduck.com/assets.00/phone-icon-1561x2048-qjhf7be8.png" class="size-20 ml-10"/>
           <p>442 4242 4242</p>
         </div>
